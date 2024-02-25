@@ -17,3 +17,10 @@ terraform apply
 - Build: Zipear las librerias y el arifact de Lambda.
 - Post-build: Subir el artifact a Lambda
 
+5. Vamos a AWS Codebuild y creamos un proyecto, aqui elegimos la fuente que sera Github, podemos usar/crear una conexion o usar un personal acces token. Escogemos el repositorio y la rama.
+![Alt text](image.png)
+Al ser un third-party source provider, debemos habilitar webhooks para que dispare el evento. Podemos filtro el tipo de evento tambien.
+![Alt text](image-1.png)
+Tambien debemos elegir la imagen que queremos que corra, el rol de ser necesario otro, ingresar comandos o usar un archivo buildspec y CREAR EL PROYECTO.
+
+6. Damos permiso al rol para interactuar con Lambda
